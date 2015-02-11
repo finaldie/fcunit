@@ -11,8 +11,8 @@ extern "C" {
 #define FCUNIT_ASSERT(expression) \
     do { \
         if (!(expression)) { \
-            fprintf(stderr, "assertion failed at %s %s:%d, expect: %s\n", \
-                   __FILE__, __func__, __LINE__, #expression); \
+            fprintf(stderr, "assertion failed at %s:%d(%s), expect: %s\n", \
+                   __FILE__, __LINE__, __func__, #expression); \
             exit(1); \
         } \
     } while (0)
